@@ -1,0 +1,117 @@
+.container {
+    place-items: center; 
+    height: 70vh; 
+    .form-container{
+        width: 50%;
+    }
+    h3{
+        width: 100%;
+        background-color: gray;
+        padding: 10px;
+        color: white;
+    
+    }
+    .table-output{
+        width: 98%;
+        .col-header{
+            background-color: silver;
+            width: fit-content;
+            padding: 5px 10px;
+            border: solid 1px silver;
+            border-right: solid 1px white;
+        }
+        tr{
+            height: fit-content;
+            border: solid 1px silver;
+            td{
+                border-bottom: solid 1px silver;
+                border-right: solid 1px silver;
+            }
+        }
+        tr:nth-child(odd){
+            background-color: rgba(225, 225, 225, 0.4);
+        }
+        tr:nth-child(even){
+            background-color: rgba(192, 192, 192, 0.4);
+        }
+    }
+    .form-container {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center; 
+        grid-row: 1; 
+        .form-group {
+            margin-bottom: 10px;
+            .form-label{
+                float: left;
+            }
+            .form-select, .form-text, .date-input{
+                width: 100%;
+                border-radius: 6px;
+            }
+            .date-input{
+                height: 36px;
+                font-size: medium;
+                padding: 2px 10px;
+            }
+        }
+    }
+    .form-output{
+        display: grid;
+        grid-template-columns: 50% auto;
+        width: 80%;
+        .COH-Output{
+            display: grid;
+            grid-template-columns: 50% auto;
+        }
+        
+        div{
+            border: solid 1px;
+            padding: 10px;
+            label{
+                font-weight: bolder;
+                background-color: silver;
+                width: 100%;
+            }
+        }
+    }
+    
+}
+
+.textBox {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; 
+    text-align: center; 
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.output {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    grid-row: 2; 
+    
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,13 @@
+.header{
+    position: relative;
+    background-color: #006;
+    color: orange;
+    padding: 5px 20px;
+    font-size: larger;
+    margin: 0 auto;
+    label {
+        position: relative;
+        top: -10;
+        letter-spacing: 3px;
+    }
+}

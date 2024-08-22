@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="form-container">
+        <div class="form-group">
+            <label class="form-label" for="mrn">Enter MRN</label>
+            <input class="form-text" type="text" [(ngModel)]="mrn" name="mrn" id="mrn">
+        </div>
+    
+        <div *ngIf="desc==='Medication'" class="form-group">          
+            <label class="form-label" for="dateSelection">Date:</label>
+            <input class="form-text date-input"   type="date" [(ngModel)]="date"id="birthday" name="birthday">              
+        </div>
+        <div class="form-group">
+            <label class="form-label">Select Category</label>
+            <select class="form-select" [(ngModel)]="desc">
+                <option *ngFor="let item of categoryData " value="{{item.desc}}">
+                    {{item.desc}}
+                </option>
+                </select>
+        </div>
+        <button (click)="submit()">Submit</button>
+    </div>
+        <kendo-splitter orientation="horizontal" style="height: 200px;">
+            <kendo-splitter-pane size="20%"> <h3>Azure</h3><div>
+                
+                <table class="table-output">
+                    <thead>
+                        <tr>
+                            <th class="col-header" *ngFor="let dataItem of data?.azure[0] | keyvalue">
+                                <div>{{dataItem.key}}</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of data?.azure">
+                            <td *ngFor="let dataItem of row | keyvalue">
+                                <div>{{dataItem.value}}</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> </kendo-splitter-pane>
+            <kendo-splitter-pane> <h3>Database Info</h3><div>
+                <table class="table-output">
+                    <thead>
+                        <tr>
+                            <th class="col-header" *ngFor="let dataItem of data?.city_of_hope[0] | keyvalue">
+                                <div>{{dataItem.key}}</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of data?.city_of_hope">
+                            <td *ngFor="let dataItem of row | keyvalue">
+                                <div>{{dataItem.value}}</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> </kendo-splitter-pane>
+            <kendo-splitter-pane size="20%"> <h3>Ai Input</h3> <div>
+
+                <table class="table-output">
+                    <thead>
+                        <tr>
+                            <th class="col-header" *ngFor="let dataItem of data?.ai_input[0] | keyvalue">
+                                <div>{{dataItem.key}}</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of data?.ai_input">
+                            <td *ngFor="let dataItem of row | keyvalue">
+                                <div>{{dataItem.value}}</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></kendo-splitter-pane>
+          </kendo-splitter>
+        
+</div>
+
